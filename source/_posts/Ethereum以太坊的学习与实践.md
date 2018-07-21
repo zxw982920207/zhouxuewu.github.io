@@ -1,15 +1,13 @@
 ---
 
 title: Ethereum以太坊的学习与实践
-
 date: 2018-04-06
+tags: [blockchain,ethereum]
 
-tags: blockchain
 ---
 
 <img src="/img/learn_eth.jpeg" alt="ethereum" width="750px" height="300px" />
 
-<!-- more -->
 
 ### 区块链
 

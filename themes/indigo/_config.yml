@@ -14,9 +14,9 @@ menu:
   archives:
     text: 归档
     url: /archives
-  # tags:
-  #   text: 标签
-  #   url: /tags
+  tags:
+    text: 标签
+    url: /tags
   # th-list:
   #   text: 分类
   #   url: /categories
@@ -25,7 +25,7 @@ menu:
     target: _blank
   link:
     text: 关于
-    url: /custom
+    url: /aboutme
 
 rss: /atom.xml
 
@@ -41,6 +41,10 @@ favicon: /favicon.ico
 # email
 email: shengly0619@126.com
 
+# Content
+tags:
+  title: 标签
+
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
 
@@ -51,13 +55,13 @@ categories_title: Categories
 
 # 文章截断
 excerpt_render: false
-excerpt_length: 200
+excerpt_length: 150
 excerpt_link: 阅读全文...
 mathjax: false
-archive_yearly: true
+archive_yearly: false
 
 # 是否显示文章最后更新时间
-show_last_updated: false
+show_last_updated: true
 
 # 是否开启分享
 share: true
@@ -72,7 +76,7 @@ reward:
 search: true
 
 # 是否大屏幕下文章页隐藏导航
-hideMenu: true
+hideMenu: false
 
 # 是否开启toc
 # toc: false
@@ -80,7 +84,7 @@ toc:
   list_number: false  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage: 这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+postMessage: 转载请注明出处：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz: false
@@ -144,7 +148,7 @@ canonical: http://successli.cn
 since_year: 2017
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 进击的程序猿
+about: false
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
