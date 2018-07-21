@@ -14,12 +14,12 @@ menu:
   archives:
     text: 归档
     url: /archives
-  tags:
-    text: 标签
-    url: /tags
-  th-list:
-    text: 分类
-    url: /categories
+  # tags:
+  #   text: 标签
+  #   url: /tags
+  # th-list:
+  #   text: 分类
+  #   url: /categories
   github:
     url: https://github.com/successli
     target: _blank
