@@ -3,7 +3,7 @@
 
 # 添加新菜单项遵循以下规则
 # menu:
-#  link:               fontawesome图标，省略前缀，本主题前缀为 icon-，必须
+#    link:             fontawesome图标，省略前缀，本主题前缀为 icon-，必须
 #    text: About       菜单显示的文字，如果省略即默认与图标一致，首字母会转大写
 #    url: /about       链接，绝对或相对路径，必须。
 #    target: _blank    是否跳出，省略则在当前页面打开
@@ -57,7 +57,7 @@ mathjax: false
 archive_yearly: true
 
 # 是否显示文章最后更新时间
-show_last_updated: true
+show_last_updated: false
 
 # 是否开启分享
 share: true
@@ -153,8 +153,8 @@ visit_counter:
 
 # 动态定义title
 title_change:
-  normal: (つェ⊂)咦!又好了!
-  leave: 死鬼去哪里了！
+  normal: welcome
+  leave: successli's blog
 
 # 设置为 true 发布后将使用 unpkg cdn 最新的主题样式
 # 如果想让你的自定义样式生效，把此项设为 false
