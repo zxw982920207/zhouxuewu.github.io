@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/">
+    
+    
+    <title>Ethereum私有链的搭建和部分源码编译问题的汇总 | successli的个人博客 | 记录成长，分享点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="blockchain">
+    <meta name="keywords" content="blockchain">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ethereum私有链的搭建和部分源码编译问题的汇总">
+<meta property="og:url" content="http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/index.html">
+<meta property="og:site_name" content="successli的个人博客">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://successli.cn/img/ethereum.jpeg">
+<meta property="og:updated_time" content="2018-07-21T15:08:01.266Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ethereum私有链的搭建和部分源码编译问题的汇总">
+<meta name="twitter:image" content="http://successli.cn/img/ethereum.jpeg">
+    
+        <link rel="alternate" type="application/atom+xml" title="successli的个人博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">successli</h5>
+          <a href="mailto:shengly0619@126.com" title="shengly0619@126.com" class="mail">shengly0619@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/successli" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Ethereum私有链的搭建和部分源码编译问题的汇总</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Ethereum私有链的搭建和部分源码编译问题的汇总</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-04-12T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-04-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#准备"><span class="post-toc-text">准备</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Ethereum环境安装"><span class="post-toc-text">1.Ethereum环境安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-solc源码编译安装"><span class="post-toc-text">2.solc源码编译安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-启动以太坊客户端"><span class="post-toc-text">3.启动以太坊客户端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-智能合约的编译与部署"><span class="post-toc-text">4.智能合约的编译与部署</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-webapp与以太坊平台的交互方式"><span class="post-toc-text">5.webapp与以太坊平台的交互方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用命令汇总"><span class="post-toc-text">常用命令汇总</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Ethereum私有链的搭建及部分源码编译问题汇总"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Ethereum私有链的搭建和部分源码编译问题的汇总</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-04-13 00:00:00" datetime="2018-04-12T16:00:00.000Z"  itemprop="datePublished">2018-04-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><img src="/img/ethereum.jpeg" alt="ethereum" width="750px" height="300px"></p>
+<a id="more"></a>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>1.安装curl,git</p>
+<p>2.安装go配置环境变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># go config</span><br><span class="line"><span class="keyword">export</span> GOPATH=$HOME/go</span><br><span class="line"><span class="keyword">export</span> GOBIN=$HOME/go/bin</span><br><span class="line"><span class="keyword">export</span> GOROOT=<span class="regexp">/usr/</span>local/go</span><br><span class="line"><span class="keyword">export</span> PATH=<span class="regexp">/usr/</span>local/go/bin:$GOPATH/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>3.安装nodejs+npm</p>
+<h3 id="1-Ethereum环境安装"><a href="#1-Ethereum环境安装" class="headerlink" title="1.Ethereum环境安装"></a>1.Ethereum环境安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo add-apt-repository -y ppa:ethereum/ethereum</span><br><span class="line">sudo add-apt-repository -y ppa:ethereum/ethereum-dev</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ethereum</span><br></pre></td></tr></table></figure>
+<p>此时,安装的以太坊客户端版本号是最新稳定版.<br>对于1.5.9-stable版本的geth,我们需要通过编译源码获得.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/ethereum/go-ethereum</span></span><br><span class="line">cd go-ethereum</span><br><span class="line">git checkout v1.5.9 #切换版本</span><br><span class="line">make geth #编译</span><br></pre></td></tr></table></figure>
+<h3 id="2-solc源码编译安装"><a href="#2-solc源码编译安装" class="headerlink" title="2.solc源码编译安装"></a>2.solc源码编译安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ethereum/ethereum</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install solc</span><br></pre></td></tr></table></figure>
+<p>此时,安装的solc也是最新版本.<br>旧版本的solc需要通过编译源码的方式获得.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/ethereum/solidity.git</span></span><br><span class="line">cd solidity</span><br><span class="line">git checkout v0.4.10 #切换版本</span><br><span class="line">sudo ./scripts/install_deps.sh #安装依赖</span><br><span class="line">sudo ./scripts/build.sh #源码编译</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ps:在Ubuntu16.04本地环境下,源码编译成功.但在Ubuntu16.04服务器环境下,编译失败,寻因未果.<br>报错信息如下:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">See also <span class="string">"/home/ubuntu/solidity/build/CMakeFiles/CMakeOutput.log"</span>.</span><br><span class="line">See also <span class="string">"/home/ubuntu/solidity/build/CMakeFiles/CMakeError.log"</span>.</span><br><span class="line">Failed to build</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动以太坊客户端"><a href="#3-启动以太坊客户端" class="headerlink" title="3.启动以太坊客户端"></a>3.启动以太坊客户端</h3><p>1.创建账户</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">geth account <span class="keyword">new</span></span><br><span class="line">geth account <span class="keyword">new</span></span><br><span class="line">geth account new #连续创建三个账户,密码123456</span><br></pre></td></tr></table></figure>
+<p>2.生成创世区块</p>
+<ul>
+<li>编辑创世区块配置文件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    # ~/test-genesis.json</span><br><span class="line">    <span class="string">"nonce"</span>: <span class="string">"0x0000000000000042"</span>,</span><br><span class="line">    <span class="string">"difficulty"</span>: <span class="string">"0x1"</span>,</span><br><span class="line">    <span class="string">"alloc"</span>: &#123;</span><br><span class="line">        "246d779602e185a53240a6cc5b01f74a17bd5deb": &#123; #实际账户地址,需自定义</span><br><span class="line">            "balance": "20000009800000000000000000000" #每个账户余额初始值</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"c0a07133e5dc82ab923bbe9506f3ea4479d2b797"</span>: &#123;</span><br><span class="line">            <span class="string">"balance"</span>: <span class="string">"20000009800000000000000000000"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"b62b9d792e9825072f3d416569cc07e43a20c84f"</span>: &#123;</span><br><span class="line">            <span class="string">"balance"</span>: <span class="string">"20000009800000000000000000000"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"config"</span>: &#123;</span><br><span class="line">        <span class="string">"chainId"</span>: <span class="number">15</span>,</span><br><span class="line">        <span class="string">"homesteadBlock"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">"eip155Block"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">"eip158Block"</span>: <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"mixhash"</span>: <span class="string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span>, <span class="string">"coinbase"</span>: <span class="string">"0x0000000000000000000000000000000000000000"</span>,</span><br><span class="line">    <span class="string">"timestamp"</span>: <span class="string">"0x00"</span>,</span><br><span class="line">    <span class="string">"parentHash"</span>: <span class="string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span>,</span><br><span class="line">    <span class="string">"extraData"</span>: <span class="string">"0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa"</span>,</span><br><span class="line">    <span class="string">"gasLimit"</span>: <span class="string">"0x2fefd8"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成创世区块</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">geth --datadir <span class="string">"~/.ethereum"</span> init blockchain/test-genesis.json</span><br></pre></td></tr></table></figure>
+<p>3.配置以太坊客户端启动脚本</p>
+<ul>
+<li>保存账号密码到password文件,用于解锁账户</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 配置密码,每一个账户对应一行密码</span><br><span class="line"># ~/.ethereum/password</span><br><span class="line"><span class="number">123456</span></span><br><span class="line"><span class="number">123456</span></span><br><span class="line"><span class="number">123456</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在以太坊中,出于安全机制,以太坊每隔一段时间就会锁定账户<br>所以我们可以有两种方式解锁以太坊账户<br>1.在启动脚本中读取密码文件解锁<br>2.使用以下js交互命令</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web3.eth.personal.unlockAccount(fromAddress, passWord, 10000) #解锁持续时间10000ms</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编写启动脚本</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># ~/.ethereum/private_blockchain.sh</span><br><span class="line">geth --rpc --rpcaddr="0.0.0.0" --rpccorsdomain="*" --unlock '0,1,2' #解锁三个账户</span><br><span class="line"> --password ~/.ethereum/password  #保存密码明文的文件</span><br><span class="line"> --nodiscover --maxpeers <span class="string">'5'</span> --networkid <span class="string">'1234574'</span> --datadir <span class="string">'~/.ethereum'</span> <span class="built_in">console</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动以太坊客户端,进入JS交互式命令行</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash private_blockchain.sh</span><br></pre></td></tr></table></figure>
+<h3 id="4-智能合约的编译与部署"><a href="#4-智能合约的编译与部署" class="headerlink" title="4.智能合约的编译与部署"></a>4.智能合约的编译与部署</h3><blockquote>
+<p>部署合约前的准备工作:<br>通过<a href="https://remix.ethereum.org/" target="_blank" rel="noopener">Remix</a>或<a href="http://www.hyperchain.cn/" target="_blank" rel="noopener">趣链开发者平台</a>编译智能合约获得ABI和BIN.<br>account的balance大于0且已解锁.</p>
+</blockquote>
+<ul>
+<li>定义bank_abi</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bank_abi=[&#123;constant:false,inputs:[&#123;name:'a',type:'uint256'&#125;],name:'multiply',outputs:[&#123;name:'d',type:'uint256'&#125;],type:'function'&#125;] #此处为实例,实际abi需自定义</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建合约</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bankContract = web3.eth.contract(bank_abi)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解锁账户</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">personal.unlockAccount(eth.coinbase, '123456', 10000) #eth.coinbase是指定矿工的地址,默认是eth.accounts[0]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>部署合约</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bank=bankContract.new(&#123;from:eth.coinbase,data:"0x60606040523415600b57fe5b5b60788061001a6000396000f300606060405263ffffffff60e060020a600035041663c6888fa181146020575bfe5b3415602757fe5b60306004356042565b60408051918252519081900360200190f35b600781025b9190505600a165627a7a7230582007a6259ba3d57941abda2e261e9a67958a3eda78b779d9dd8d42518791fddd590029"&#125;) #此处的二进制是智能合约编译后生成的BIN,需自定义</span><br></pre></td></tr></table></figure>
+<ul>
+<li>挖矿上链<blockquote>
+<p>部署合约的过程实际也是由创建合约的账户发送的一笔交易（即eth.coinbase账户）。需要挖矿进行确认。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">miner.start(1) #启动一个线程(貌似)</span><br><span class="line">miner.stop() #需手动停止挖矿</span><br></pre></td></tr></table></figure>
+<ul>
+<li>确认上链</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eth.getBlocks[1] #区块编号一般是已有区块的基础上加1</span><br></pre></td></tr></table></figure>
+<p>此时,如果usedGas参数大于0,表示挖矿成功.</p>
+<h3 id="5-webapp与以太坊平台的交互方式"><a href="#5-webapp与以太坊平台的交互方式" class="headerlink" title="5.webapp与以太坊平台的交互方式"></a>5.webapp与以太坊平台的交互方式</h3><blockquote>
+<p>未完待续</p>
+</blockquote>
+<h3 id="常用命令汇总"><a href="#常用命令汇总" class="headerlink" title="常用命令汇总"></a>常用命令汇总</h3><p>geth命令:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">geth --datadir "~/.ethereum" init ./test-genesis.json #以test-genesis.json脚本初始化创世区块,设置datadir</span><br><span class="line">geth account new #新建一个账户,需要输入两次密码</span><br><span class="line">geth account list #list所有的账户地址</span><br></pre></td></tr></table></figure>
+<p>js交互命令:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">eth #列出所有的账户地址,区块数以及eth命令下的函数名称</span><br><span class="line">eth.coinbase #矿工地址,一般为第一个账户地址,即eth.accounts[0]</span><br><span class="line">eth.accounts[0] #第一个账户地址</span><br><span class="line">eth.getBlocks(0) #获取第一个区块信息</span><br><span class="line">eth.getBalance(eth.accounts[0]) #获取第一个账户的余额</span><br><span class="line">eth.getTransactionRecepit(xxx) #获取部署后的合约地址,参数为合约地址所在的区块中的Transaction字段</span><br><span class="line">admin.setSloc('/usr/local/bin/solc') #指定solc编译器的地址</span><br><span class="line">txpool.status #查看交易池信息,比如等待队列中交易的数量</span><br><span class="line">miner.start(1) #开启一个线程进行挖矿操作</span><br><span class="line">miner.stop() #需要手动停止挖矿</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考资料</p>
+<ol>
+<li><a href="http://www.cnblogs.com/liangyue/p/6824858.html" target="_blank" rel="noopener">ubuntu系统搭建以太坊私有链</a></li>
+<li><a href="https://www.cnblogs.com/lxcmyf/p/8489273.html#version=soljson-latest.js" target="_blank" rel="noopener">以太坊合约简单部署和使用</a></li>
+</ol>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" target="_blank" rel="external">http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://successli.cn">
+            <img src="/img/avatar.jpg" alt="successli">
+            successli
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blockchain/">blockchain</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&title=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&pic=http://successli.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&title=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&via=http://successli.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/07/21/hello-world/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/06/Ethereum以太坊的学习与实践/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Ethereum以太坊的学习与实践</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/alipay.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>successli &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&title=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&pic=http://successli.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&title=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ethereum私有链的搭建和部分源码编译问题的汇总》 — successli的个人博客&url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/&via=http://successli.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADI0lEQVR42u3aW5LiMBAEwLn/pdkDzBiq1GIDi/QXwRhZKW9sRz9+fuLrcXH9/uvvX13dk9x/9dfk+w0XNjY29k3Yj6dXvnRyHFeYq3vaNRMLNjY29qns54Hh+RJ5SEvCYRuikteDjY2Njf0clmw9Dz/JMWFjY2Njr7GTdKItDK2FvTzVwcbGxv4edt4AmISZ5IDWguIba2nY2NjYH8/Ou6Kf//kt/W1sbGzsD2Y/lq61kJOv047j1PvHxsbGPojdBol2vGatcZs8sU2f/nguNjY29kHsSWt2EsDaMaDk+825FzY2Nvat2LtGYfYGmxaf7w0bGxv7DHY+UtMO0+TpxK47k3Zy8c8AGxsb+1bsHDYp97fNhoSdH8QfAQwbGxv7IHb+f3ubnLS/fXd4K94hNjY29q3YbdHnfzZf1xKhF5+xsbGxD2JPUo61EZ98o/mhz4ti2NjY2Pdlry2RNFbXWrNr67QvAxsbG/sk9q7WaVsAStbJA9taAoONjY19Erst3ycb2jwZOv5tlHthY2Nj35a9Vujf1crNk4rJOpepCDY2NvYR7EnQykdt9g4GteM+RQzExsbGPojdDtzMe855SNt1TNjY2NhnsPMldm1obyu3bSRjY2Njn8dOkoQkwUg2MSn950+pV8PGxsY+gr02pD5PbyZh9bF0YWNjY5/Ebsv3bYEpZ7d3TpoT2NjY2Oex8zDWBpU8dM1DVNF4wMbGxj6IPa+cJw/e1TB+fkztK8TGxsY+g51sLi/Nt2FvgklezOUTsbGxsb+A3SYD+SYSQHtA7UgQNjY29kns+XhNHmDWxoOSkJlQXyQk2NjY2Ldlr2167+aSYLmGvPyMjY2NfRA7b4JOWqptc3eeqEQvCRsbG/sI9qO82hNtj6AdxMn72NjY2NinsueDO+0K8xDV/mpxUgkbGxv7Vuy97d68SJQP6yTUPNBiY2Njn8puiz55wNh1QGux90UAw8bGxv4y9iSdaItTLb4uOWFjY2N/Jbt9/Lz8lGPqKho2Njb2cey8qDQp2W/uWiy1k7GxsbHPY6+1afNC0jwctt9su7CxsbE/nf0PhDs57TVV4JkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'successli's blog';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'welcome';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

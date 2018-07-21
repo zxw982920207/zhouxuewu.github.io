@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="http://successli.cn/2016/05/01/读《第一行代码》有感/">
+    
+    
+    <title>读《第一行代码》有感 | successli的个人博客 | 记录成长，分享点滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Java,Android">
+    <meta name="keywords" content="Java,Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读《第一行代码》有感">
+<meta property="og:url" content="http://successli.cn/2016/05/01/读《第一行代码》有感/index.html">
+<meta property="og:site_name" content="successli的个人博客">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://successli.cn/img/android.gif">
+<meta property="og:updated_time" content="2018-07-21T15:08:01.266Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="读《第一行代码》有感">
+<meta name="twitter:image" content="http://successli.cn/img/android.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="successli的个人博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">successli</h5>
+          <a href="mailto:shengly0619@126.com" title="shengly0619@126.com" class="mail">shengly0619@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/successli" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">读《第一行代码》有感</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">读《第一行代码》有感</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-04-30T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2016-05-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个活动"><span class="post-toc-text">一个活动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-加载布局文件"><span class="post-toc-text">1.加载布局文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-注册Activity"><span class="post-toc-text">2.注册Activity</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-隐藏标题栏"><span class="post-toc-text">3.隐藏标题栏</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-在活动中使用Toast"><span class="post-toc-text">4.在活动中使用Toast</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-在活动中使用Menu"><span class="post-toc-text">5.在活动中使用Menu</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-销毁一个活动"><span class="post-toc-text">6.销毁一个活动</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#活动之间"><span class="post-toc-text">活动之间</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-使用显式Intent"><span class="post-toc-text">1.使用显式Intent</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-使用隐式Intent"><span class="post-toc-text">2.使用隐式Intent</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-更多隐式Intent用法"><span class="post-toc-text">3.更多隐式Intent用法</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-读《第一行代码》有感"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">读《第一行代码》有感</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-05-01 00:00:00" datetime="2016-04-30T16:00:00.000Z"  itemprop="datePublished">2016-05-01</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><img src="/img/android.gif" alt="android" width="750px" height="300px"></p>
+<a id="more"></a>
+<h3 id="一个活动"><a href="#一个活动" class="headerlink" title="一个活动"></a>一个活动</h3><p>新建一个android工程，默认不创建活动，新建FirstActivity.java文件</p>
+<h4 id="1-加载布局文件"><a href="#1-加载布局文件" class="headerlink" title="1.加载布局文件"></a>1.加载布局文件</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">	requestWindowFeature(Window.FEATURE_NO_TITLE);	</span><br><span class="line">	<span class="comment">//加载布局文件</span></span><br><span class="line">	setContentView(R.layout.first_layout);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-注册Activity"><a href="#2-注册Activity" class="headerlink" title="2.注册Activity"></a>2.注册Activity</h4><p>在AndroidManifest.xml文件中</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:allowBackup</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:icon</span>=<span class="string">"@drawable/ic_launcher"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:theme</span>=<span class="string">"@style/AppTheme"</span> &gt;</span></span><br><span class="line">    &lt;-&lt;!-- 注册活动 --&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">activity</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">android:name</span>=<span class="string">".FirstActivity"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:label</span>=<span class="string">"This is first activity"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 定义为主活动 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-隐藏标题栏"><a href="#3-隐藏标题栏" class="headerlink" title="3.隐藏标题栏"></a>3.隐藏标题栏</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">	<span class="comment">//隐藏标题栏</span></span><br><span class="line">	requestWindowFeature(Window.FEATURE_NO_TITLE);	</span><br><span class="line">	<span class="comment">//加载布局文件</span></span><br><span class="line">	setContentView(R.layout.first_layout);		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-在活动中使用Toast"><a href="#4-在活动中使用Toast" class="headerlink" title="4.在活动中使用Toast"></a>4.在活动中使用Toast</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Toast.makeText(<span class="keyword">this</span>, <span class="string">"Clicked Add"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line"><span class="comment">//第一个参数是活动的上下文</span></span><br><span class="line"><span class="comment">//第二个参数是显示的文本</span></span><br><span class="line"><span class="comment">//第三个参数是 示的时间长短（Toast.LENGTH_SHORT or Toast.LENGTH_LONG）</span></span><br><span class="line">Toast android.widget.Toast.makeText(Context context, CharSequence text, <span class="keyword">int</span> duration);</span><br></pre></td></tr></table></figure>
+<h4 id="5-在活动中使用Menu"><a href="#5-在活动中使用Menu" class="headerlink" title="5.在活动中使用Menu"></a>5.在活动中使用Menu</h4><ul>
+<li>在res-&gt;menu下新建一个Menu Resource Type 的**.xml文件</li>
+<li>编辑**.xml文件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">menu</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span> &gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">"@+id/add_item"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:title</span>=<span class="string">"Add"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">"@+id/remove_item"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:title</span>=<span class="string">"Remove"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">menu</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>重写FirstActivity.java中onCreateOptionsMenu()方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onCreateOptionsMenu</span><span class="params">(Menu menu)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"></span><br><span class="line">	getMenuInflater().inflate(R.menu.**, menu);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>为了使Menu中的item能够有功能，重写onOptionsItemSelected()方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onOptionsItemSelected</span><span class="params">(MenuItem item)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	<span class="keyword">switch</span> (item.getItemId()) &#123;</span><br><span class="line">	<span class="keyword">case</span> R.id.add_item:</span><br><span class="line">		Toast.makeText(<span class="keyword">this</span>, <span class="string">"Clicked Add"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> R.id.remove_item:</span><br><span class="line">		Toast.makeText(<span class="keyword">this</span>, <span class="string">"Clicked Remove"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="6-销毁一个活动"><a href="#6-销毁一个活动" class="headerlink" title="6.销毁一个活动"></a>6.销毁一个活动</h4><p>Activity类提供了一个方法,来销毁一个活动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//finish();</span><br><span class="line">	@Override</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">//		Toast.makeText(FirstActivity.this, &quot;clicked&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">		finish();//销毁活动		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>以上是创建一个活动涉及的知识</p>
+<hr>
+<h3 id="活动之间"><a href="#活动之间" class="headerlink" title="活动之间"></a>活动之间</h3><h4 id="1-使用显式Intent"><a href="#1-使用显式Intent" class="headerlink" title="1.使用显式Intent"></a>1.使用显式Intent</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	@Override</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">//		Toast.makeText(FirstActivity.this, &quot;clicked&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">//		finish();//销毁活动</span><br><span class="line">//使用显式Intent在FirstActivity活动基础上打开SecondActivity活动</span><br><span class="line">		Intent intent = new Intent(FirstActivity.this, SecondActivity.class);</span><br><span class="line">//调用startActivity()执行intent</span><br><span class="line">		startActivity(intent);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-使用隐式Intent"><a href="#2-使用隐式Intent" class="headerlink" title="2.使用隐式Intent"></a>2.使用隐式Intent</h4><p>需要实现从FirstActivity到达另外一个符合要求的活动中去<br>SecondActivity需要符合这个要求<br>首先在ActivityManifest.xml文件中定义<action>和<category>标签</category></action></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity </span><br><span class="line">    android:name=&quot;.SecondActivity&quot; &gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;!-- 定义一个标签来符合要求被FirstActivity活动启动 --&gt;</span><br><span class="line">        &lt;action android:name=&quot;***&quot;/&gt;</span><br><span class="line">        	&lt;category android:name=&quot;android.intent.category.DEFAULT&quot; /&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在FirstActivity中的onClick()方法中setAction这个标签，达到启动指定要求的应用的目的<br>有两种方法设置这个category<br>1.在构造方法中setAction这个category这个标签<br>2.直接调用Intent对象的intent.setAction()方法设置标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	@Override</span><br><span class="line">	public void onClick(View v) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">//		Toast.makeText(FirstActivity.this, &quot;clicked&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">//		finish();//销毁活动</span><br><span class="line">//		Intent intent = new Intent(FirstActivity.this, SecondActivity.class);</span><br><span class="line">//		startActivity(intent);</span><br><span class="line">		//隐式Intent</span><br><span class="line">		Intent intent=new Intent(&quot;***&quot;);//构造方法</span><br><span class="line">//		Intent intent=new Intent();</span><br><span class="line">//		intent.setAction(&quot;com.example.activity.ACTION_START&quot;)</span><br><span class="line">		startActivity(intent);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>因为startActivity启动时就是根据默认的category标签，所以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;category android:name=&quot;android.intent.category.DEFAULT&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>可以调用默认的category来startActivity，当然我们也可以设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Intent intent=new Intent();</span><br><span class="line">intent.setCategory(&quot;***&quot;);</span><br></pre></td></tr></table></figure>
+<h4 id="3-更多隐式Intent用法"><a href="#3-更多隐式Intent用法" class="headerlink" title="3.更多隐式Intent用法"></a>3.更多隐式Intent用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent intent=new Intent(Intent.ACTION_VIEW);</span><br><span class="line">intent.setData(Uri.parse(&quot;http://www.baidu.com&quot;));</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>指定Intent的action是Intent.ACTION_VIEW,是安卓系统内置动作，其常量为</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android.intent.action.VIEW</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>Uri.parse(&quot;http://www.baidu.com&quot;)</code> 将网址解析成一个Uri对象</li>
+<li>调用Intent的 <code>setData()</code> 方法将Uri对象传递进去</li>
+</ul>
+<hr>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2016/05/01/读《第一行代码》有感/" target="_blank" rel="external">http://successli.cn/2016/05/01/读《第一行代码》有感/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://successli.cn">
+            <img src="/img/avatar.jpg" alt="successli">
+            successli
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Android/">Java,Android</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2016/05/01/读《第一行代码》有感/&title=《读《第一行代码》有感》 — successli的个人博客&pic=http://successli.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2016/05/01/读《第一行代码》有感/&title=《读《第一行代码》有感》 — successli的个人博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2016/05/01/读《第一行代码》有感/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《读《第一行代码》有感》 — successli的个人博客&url=http://successli.cn/2016/05/01/读《第一行代码》有感/&via=http://successli.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2016/05/01/读《第一行代码》有感/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/10/Git学习笔记/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Git学习笔记</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/alipay.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>successli &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2016/05/01/读《第一行代码》有感/&title=《读《第一行代码》有感》 — successli的个人博客&pic=http://successli.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2016/05/01/读《第一行代码》有感/&title=《读《第一行代码》有感》 — successli的个人博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2016/05/01/读《第一行代码》有感/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《读《第一行代码》有感》 — successli的个人博客&url=http://successli.cn/2016/05/01/读《第一行代码》有感/&via=http://successli.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2016/05/01/读《第一行代码》有感/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHElEQVR42u3aQW7DMAwEQP//0+61QAx3KcpBLY1ORRBbmhxYiuRxxOv8tT4/v//+57PJU8cTCwMD47WM83Ylx7p/8/1Bx/a92B0DA2MDxv0h8gMlb7j/IfLQjIGBgXF/iA4mfwMGBgZGn5GnfdX0EQMDA2PsEptfUJPrblLCe+QujoGB8UJGXnX//t+P9DcwMDBexTiLq5MyzgqyF6fCwMBYmpEHuE7bstNsKJwHAwNjacZYuzH5PB+h6MMwMDDWZkwuaTWGJ6rjGhgYGPswElI1+FbTu0caABgYGEsw8ofntjDHRsEm/MfAwMB4LaMz6JC/oRPQCyU2DAyMRRnV5C/Zphq+870ufkQMDIylGUmZPv/8O0H2j2ELDAyM5RidAllyvcwDd+dZDAyMtRljxa/+IEW10BYllxgYGIsyxq6X1UGK6jBZedgCAwNjG0Ye7MYY1aMXLrcYGBhLMzor3yxvjlb3PfoLAwPjhYzOiFi1lNa54mJgYOzGqA5JVJuUY6lnNYhjYGDswMhJ1XQwL8NNaGFiYGAszaima9V0cNb1tXyrxsDAeDnjLK4k8OUHnTWugYGBsTZjVhtgLE1sDVg80c3AwMD4x4xOqje2cScQY2Bg7MzoH64aZB+5ymJgYGA0yv2dkYsHAy4GBsbSjORA+bH678fAwNiBUR2wqJbP8uZoPmyBgYGxD6N6dRwb86q2LfNBMQwMjKUZP8HwvCp0t5GyAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'successli's blog';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'welcome';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
