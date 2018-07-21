@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>successli的个人博客</title>
   <icon>https://www.gravatar.com/avatar/d554f58d80d7a73feabf4a7fa1774974</icon>
-  
+  <subtitle>记录成长，分享点滴</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://successli.cn/"/>
