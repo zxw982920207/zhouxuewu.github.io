@@ -30,7 +30,8 @@ menu:
 rss: /atom.xml
 
 # 你的头像url
-avatar: /img/avatar.jpg
+# avatar: /img/avatar.jpg
+avatar: http://pccmxww5q.bkt.clouddn.com/panda_f.jpg
 # avatar link
 avatar_link: /
 # 头像背景图
@@ -148,7 +149,7 @@ canonical: http://successli.cn
 since_year: 2017
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: false
+about: 90后程序猿一枚
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
