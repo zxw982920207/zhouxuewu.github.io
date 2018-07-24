@@ -23,20 +23,20 @@
     
     
     <meta name="keywords" content="blockchain,ethereum">
-    <meta name="description" content="区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine with shared-state)。  “密码性安全(Cryptographically secure)”是指用一个很难被解开的复杂数学机制算法来保证数字货币生产的安全性。将它想象成类似于防火墙的这种。它们使得欺骗系统近乎是一">
+    <meta name="description" content="学习以太坊              区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine wit">
 <meta name="keywords" content="blockchain,ethereum">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ethereum以太坊的学习与实践">
 <meta property="og:url" content="http://successli.cn/2018/04/06/Ethereum以太坊的学习与实践/index.html">
 <meta property="og:site_name" content="successli的个人博客">
-<meta property="og:description" content="区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine with shared-state)。  “密码性安全(Cryptographically secure)”是指用一个很难被解开的复杂数学机制算法来保证数字货币生产的安全性。将它想象成类似于防火墙的这种。它们使得欺骗系统近乎是一">
+<meta property="og:description" content="学习以太坊              区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine wit">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://successli.cn/img/learn_eth.jpeg">
-<meta property="og:updated_time" content="2018-07-21T15:45:49.476Z">
+<meta property="og:image" content="http://pccmxww5q.bkt.clouddn.com/learn_eth.jpeg?imageView2/0/w/560/h/380/q/100">
+<meta property="og:updated_time" content="2018-07-24T11:49:16.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ethereum以太坊的学习与实践">
-<meta name="twitter:description" content="区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine with shared-state)。  “密码性安全(Cryptographically secure)”是指用一个很难被解开的复杂数学机制算法来保证数字货币生产的安全性。将它想象成类似于防火墙的这种。它们使得欺骗系统近乎是一">
-<meta name="twitter:image" content="http://successli.cn/img/learn_eth.jpeg">
+<meta name="twitter:description" content="学习以太坊              区块链区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine wit">
+<meta name="twitter:image" content="http://pccmxww5q.bkt.clouddn.com/learn_eth.jpeg?imageView2/0/w/560/h/380/q/100">
     
         <link rel="alternate" type="application/atom+xml" title="successli的个人博客" href="/atom.xml">
     
@@ -186,7 +186,13 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p><img src="/img/learn_eth.jpeg" alt="ethereum" width="750px" height="300px"></p>
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://pccmxww5q.bkt.clouddn.com/learn_eth.jpeg?imageView2/0/w/560/h/380/q/100" alt="学习以太坊" title="">
+                </div>
+                <div class="image-caption">学习以太坊</div>
+            </figure>
 <h3 id="区块链"><a href="#区块链" class="headerlink" title="区块链"></a>区块链</h3><p>区块链就是一个具有共享状态的密码性安全交易的单机(cryptographically secure transactional singleton machine with shared-state)。</p>
 <ul>
 <li>“密码性安全(Cryptographically secure)”是指用一个很难被解开的复杂数学机制算法来保证数字货币生产的安全性。将它想象成类似于防火墙的这种。它们使得欺骗系统近乎是一个不可能的事情（比如：构造一笔假的交易，消除一笔交易等等）。</li>
@@ -280,12 +286,12 @@
 <blockquote>
 <p>区块头</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> eth.getBlock(1)</span></span><br><span class="line">&#123;</span><br><span class="line">    difficulty: 131072,</span><br><span class="line">    extraData: "0xd783010509846765746887676f312e352e31856c696e7578",</span><br><span class="line">    gasLimit: 3144658,</span><br><span class="line">    gasUsed: 1910026,</span><br><span class="line">    hash: "0xc0b29bc36695a0437fbc8886bf37f845582169062bc6d62885a5fe626f7e295e",</span><br><span class="line">    logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",</span><br><span class="line">    miner: "0x5a1d4c5249f27ef473a6ab3b715f03313fd1f560",</span><br><span class="line">    mixHash: "0x591c1f3f5a0ded2059f1e587c160f9bf7a0d68d26d59becb30d6522877f2adfc",</span><br><span class="line">    nonce: "0x4212740f3207045d",</span><br><span class="line">    number: 1,</span><br><span class="line">    parentHash: "0x33a09ce307ed33581a1a0e2f854de4e55d6a5be246a08408c76da9dd5959869a",</span><br><span class="line">    receiptsRoot: "0x68c0e9f576c9d919b9246071b48e216bb664175e3449a41e97cdc9faa63af2be",</span><br><span class="line">    sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",</span><br><span class="line">    size: 7601,</span><br><span class="line">    stateRoot: "0x162deb8236f6a1ac694e24fb88bd9c1665c90135b6535a6281a2f6ae43b19f19",</span><br><span class="line">    timestamp: 1523541484,</span><br><span class="line">    totalDifficulty: 131073,</span><br><span class="line">    transactions: ["0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a"],</span><br><span class="line">    transactionsRoot: "0x7319b6173c48ecb69021575df2b8cc508c2fe1f3645cf63ad9f07125f35d4226",</span><br><span class="line">    uncles: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> eth.getBlock(1)</span><br><span class="line">&#123;</span><br><span class="line">    difficulty: 131072,</span><br><span class="line">    extraData: "0xd783010509846765746887676f312e352e31856c696e7578",</span><br><span class="line">    gasLimit: 3144658,</span><br><span class="line">    gasUsed: 1910026,</span><br><span class="line">    hash: "0xc0b29bc36695a0437fbc8886bf37f845582169062bc6d62885a5fe626f7e295e",</span><br><span class="line">    logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",</span><br><span class="line">    miner: "0x5a1d4c5249f27ef473a6ab3b715f03313fd1f560",</span><br><span class="line">    mixHash: "0x591c1f3f5a0ded2059f1e587c160f9bf7a0d68d26d59becb30d6522877f2adfc",</span><br><span class="line">    nonce: "0x4212740f3207045d",</span><br><span class="line">    number: 1,</span><br><span class="line">    parentHash: "0x33a09ce307ed33581a1a0e2f854de4e55d6a5be246a08408c76da9dd5959869a",</span><br><span class="line">    receiptsRoot: "0x68c0e9f576c9d919b9246071b48e216bb664175e3449a41e97cdc9faa63af2be",</span><br><span class="line">    sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",</span><br><span class="line">    size: 7601,</span><br><span class="line">    stateRoot: "0x162deb8236f6a1ac694e24fb88bd9c1665c90135b6535a6281a2f6ae43b19f19",</span><br><span class="line">    timestamp: 1523541484,</span><br><span class="line">    totalDifficulty: 131073,</span><br><span class="line">    transactions: ["0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a"],</span><br><span class="line">    transactionsRoot: "0x7319b6173c48ecb69021575df2b8cc508c2fe1f3645cf63ad9f07125f35d4226",</span><br><span class="line">    uncles: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>parentHash：父区块头的Hash值（这也是使得区块变成区块链的原因）<br>ommerHash：当前区块ommers列表的Hash值<br>beneficiary：接收挖此区块费用的账户地址<br>stateRoot：状态树根节点的Hash值（回忆一下我们之前所说的保存在头中的状态树以及它使得轻客户端认证任何关于状态的事情都变得非常简单）<br>transactionsRoot：包含此区块所有交易的Merkle树的根节点Hash值<br>receiptsRoot：包含此区块所有交易收据的Merkle树的根节点Hash值<br>logsBloom：由日志信息组成的一个Bloom过滤器 (一种数据结构)<br>difficulty： 此区块的难度级别<br>number：当前区块的计数（创世纪块的区块序号为0，对于每个后续区块，区块序号都增加1）<br>gasLimit：每个区块的当前gas limit<br>gasUsed： 此区块中交易所用的总gas量<br>timestamp：此区块成立时的unix的时间戳<br>extraData：与此区块相关的附加数据<br>mixHash：一个Hash值，当与nonce组合时，证明此区块已经执行了足够的计算<br>nonce：一个Hash值，当与mixHash组合时，证明此区块已经执行了足够的计算</p>
 <blockquote>
 <p>交易收据</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> eth.getTransactionReceipt(<span class="string">"0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a"</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    blockHash: "0xc0b29bc36695a0437fbc8886bf37f845582169062bc6d62885a5fe626f7e295e",</span><br><span class="line">    blockNumber: 1,</span><br><span class="line">    contractAddress: "0xc94dbcd3480d6c2c92bd303382ed3c3a3308194a",</span><br><span class="line">    cumulativeGasUsed: 1910026,</span><br><span class="line">    from: "0x5a1d4c5249f27ef473a6ab3b715f03313fd1f560",</span><br><span class="line">    gasUsed: 1910026,</span><br><span class="line">    logs: [],</span><br><span class="line">    logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",</span><br><span class="line">    root: "0x8f0fb37f003cb64fcbde2adefd1adcf1d588833241fad6e14b9439d26c36bf05",</span><br><span class="line">    to: null,</span><br><span class="line">    transactionHash: "0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a",</span><br><span class="line">    transactionIndex: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> eth.getTransactionReceipt("0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a")</span><br><span class="line">&#123;</span><br><span class="line">    blockHash: "0xc0b29bc36695a0437fbc8886bf37f845582169062bc6d62885a5fe626f7e295e",</span><br><span class="line">    blockNumber: 1,</span><br><span class="line">    contractAddress: "0xc94dbcd3480d6c2c92bd303382ed3c3a3308194a",</span><br><span class="line">    cumulativeGasUsed: 1910026,</span><br><span class="line">    from: "0x5a1d4c5249f27ef473a6ab3b715f03313fd1f560",</span><br><span class="line">    gasUsed: 1910026,</span><br><span class="line">    logs: [],</span><br><span class="line">    logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",</span><br><span class="line">    root: "0x8f0fb37f003cb64fcbde2adefd1adcf1d588833241fad6e14b9439d26c36bf05",</span><br><span class="line">    to: null,</span><br><span class="line">    transactionHash: "0x21db4aef57dab234ec12f864be40cd4e8a598262ffdb02a9e1d3b14b2a200b9a",</span><br><span class="line">    transactionIndex: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>交易收据包含着日志信息的交易收据的根Hash值保存在头中。 就像你在商店买东西时收到的收据一样，以太坊为每笔交易都产生一个收据。像你期望的那样，每个收据包含关于交易的特定信息，这些信息为：</p>
 <ul>
@@ -347,7 +353,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-07-21T15:45:49.476Z" itemprop="dateUpdated">2018年07月21日 23:45:49</time>
+    最后更新时间：<time datetime="2018-07-24T11:49:16.574Z" itemprop="dateUpdated">2018年07月24日 19:49:16</time>
 </span><br>
 
 
@@ -480,8 +486,18 @@
     <div class="reward-content">
         
         <div class="reward-code">
-            <img id="rewardCode" src="/img/alipay.jpg" alt="打赏二维码">
+            <img id="rewardCode" src="http://pccmxww5q.bkt.clouddn.com/weixinpay.png" alt="打赏二维码">
         </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="http://pccmxww5q.bkt.clouddn.com/weixinpay.png" data-alipay="http://pccmxww5q.bkt.clouddn.com/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
         
     </div>
 </div>
