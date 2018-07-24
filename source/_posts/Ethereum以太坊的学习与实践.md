@@ -6,8 +6,7 @@ tags: [blockchain,ethereum]
 
 ---
 
-<img src="/img/learn_eth.jpeg" alt="ethereum" width="750px" height="300px" />
-
+![学习以太坊](http://pccmxww5q.bkt.clouddn.com/learn_eth.jpeg?imageView2/0/w/560/h/380/q/100)
 
 ### 区块链
 
