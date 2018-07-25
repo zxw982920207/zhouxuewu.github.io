@@ -7,7 +7,7 @@ date: 2018-04-13
 tags: blockchain
 ---
 
-![学习以太坊](http://pccmxww5q.bkt.clouddn.com/ethereum.jpeg?imageView2/0/w/560/h/380/q/100)
+![](http://pccmxww5q.bkt.clouddn.com/ethereum.jpeg?imageView2/0/w/560/h/380/q/100)
 
 <!-- more -->
 

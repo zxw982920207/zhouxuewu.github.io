@@ -303,9 +303,9 @@ _我们这时肯定猜想和`Integer`的装箱 拆箱有关_
 我们打断点，发现通过反射设置 `value`时 竟然走了 `Integer.valueOf` 方法 
 下面是 我们调用 `swap`前后的 `IntegerCache.cache` 值得变化
 ##### 反射修改前:  
-![](/img/java_before_change.jpg "")  
+![](http://pccmxww5q.bkt.clouddn.com/java_before_change.jpg?imageView2/0/w/560/h/380/q/100 "")  
 ##### 反射修改后  
-![](/img/java_after_chang.jpg "")  
+![](http://pccmxww5q.bkt.clouddn.com/java_after_chang.jpg?imageView2/0/w/560/h/380/q/100 "")  
 在反射修改前
 
 ```java

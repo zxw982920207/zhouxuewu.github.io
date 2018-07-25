@@ -5,7 +5,8 @@ date: 2017-7-20
 
 tags: hexo
 ---
-<img src="/img/GitHub+HEXO.png" alt="Github+HEXO" width="750px" height="300px" />
+
+![](http://pccmxww5q.bkt.clouddn.com/GitHub+HEXO.png?imageView2/0/w/560/h/380/q/100 "")
 
 <!-- more -->
 

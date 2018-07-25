@@ -7,10 +7,7 @@ tags: Java
 
 ---
 
-<img src="/img/oracle_java.jpg" alt="ethereum" width="750px" height="240px" />
-
-
-<!-- more -->
+![](http://pccmxww5q.bkt.clouddn.com/oracle_java.jpg?imageView2/0/w/560/h/380/q/100 "")
 
 
 ### 准备工作

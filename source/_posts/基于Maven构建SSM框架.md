@@ -7,10 +7,7 @@ tags: Java,Maven,IDEA,SSM
 
 ---
 
-<img src="/img/spring.png" alt="spring framework" width="750px" height="300px" />
-
-<!-- more -->
-
+![](http://pccmxww5q.bkt.clouddn.com/spring.png?imageView2/0/w/560/h/380/q/100 "")
 
 #### 1.建立数据库表
 
