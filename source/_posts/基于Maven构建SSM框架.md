@@ -1,9 +1,8 @@
 ---
+
 title: 基于Maven构建SSM框架教程
-
 date: 2016-08-20
-
-tags: Java,Maven,IDEA,SSM
+tags: [java,maven,spring,idea]
 
 ---
 

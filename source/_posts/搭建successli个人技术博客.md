@@ -3,7 +3,7 @@ title: 搭建successli个人技术博客
 
 date: 2017-7-20
 
-tags: hexo
+tags: [hexo,blog]
 ---
 
 ![](http://pccmxww5q.bkt.clouddn.com/GitHub+HEXO.png?imageView2/0/w/560/h/380/q/100 "")

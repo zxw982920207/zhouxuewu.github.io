@@ -1,9 +1,8 @@
 ﻿---
+
 title: Git学习笔记
-
 date: 2016-05-10
-
-tags: Git
+tags: [git]
 
 ---
 

@@ -1,9 +1,8 @@
 ﻿---
+
 title: JDBC连接数据库笔记
-
 date: 2016-06-10
-
-tags: Java
+tags: [java]
 
 ---
 

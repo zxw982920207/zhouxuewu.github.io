@@ -1,10 +1,9 @@
 ---
 
 title: Ethereum私有链的搭建和部分源码编译问题的汇总
-
 date: 2018-04-13
+tags: [blockchain,linux]
 
-tags: blockchain
 ---
 
 ![](http://pccmxww5q.bkt.clouddn.com/ethereum.jpeg?imageView2/0/w/560/h/380/q/100)

@@ -1,7 +1,7 @@
 ---
 title: 浅谈Java多线程
 date: 2017-12-30
-tags: Java
+tags: [java]
 ---
 
 ### 1.线程与进程
