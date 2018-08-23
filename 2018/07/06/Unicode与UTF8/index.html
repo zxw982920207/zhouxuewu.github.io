@@ -13,28 +13,30 @@
     
     
     
-    <link rel="canonical" href="http://successli.cn/2018/07/21/hello-world/">
+    <link rel="canonical" href="http://successli.cn/2018/07/06/Unicode与UTF8/">
     
     
-    <title>Hello World | successli的个人博客 | 记录成长，分享点滴</title>
+    <title>Unicode与UTF8 | successli的个人博客 | 记录成长，分享点滴</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="胜。">
+    <meta name="keywords" content="utf8,unicode">
+    <meta name="description" content="Unicode与UTF81. ASCII码8bit = 1字节，所以一个字节可以表示2^8=256个数字；所以，一个字节可以表示所有的英文字符。ASCII码（一个字节）成为了美国人的标准编码。 2. GB2312中文不止256个字符，所以中国制定了GB2312编码，用两个字节表示一个汉字。GB2312还把ASCII码包含进去了。 2. Unicode但是，其他国家也同样制定了适合自己国家文字的编码">
+<meta name="keywords" content="utf8,unicode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://successli.cn/2018/07/21/hello-world/index.html">
+<meta property="og:title" content="Unicode与UTF8">
+<meta property="og:url" content="http://successli.cn/2018/07/06/Unicode与UTF8/index.html">
 <meta property="og:site_name" content="successli的个人博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Unicode与UTF81. ASCII码8bit = 1字节，所以一个字节可以表示2^8=256个数字；所以，一个字节可以表示所有的英文字符。ASCII码（一个字节）成为了美国人的标准编码。 2. GB2312中文不止256个字符，所以中国制定了GB2312编码，用两个字节表示一个汉字。GB2312还把ASCII码包含进去了。 2. Unicode但是，其他国家也同样制定了适合自己国家文字的编码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-21T07:33:59.989Z">
+<meta property="og:image" content="http://successli.cn/2018/07/06/Unicode与UTF8/dealUTF8.png">
+<meta property="og:updated_time" content="2018-08-23T03:19:13.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Unicode与UTF8">
+<meta name="twitter:description" content="Unicode与UTF81. ASCII码8bit = 1字节，所以一个字节可以表示2^8=256个数字；所以，一个字节可以表示所有的英文字符。ASCII码（一个字节）成为了美国人的标准编码。 2. GB2312中文不止256个字符，所以中国制定了GB2312编码，用两个字节表示一个汉字。GB2312还把ASCII码包含进去了。 2. Unicode但是，其他国家也同样制定了适合自己国家文字的编码">
+<meta name="twitter:image" content="http://successli.cn/2018/07/06/Unicode与UTF8/dealUTF8.png">
     
         <link rel="alternate" type="application/atom+xml" title="successli的个人博客" href="/atom.xml">
     
@@ -115,7 +117,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Hello World</div>
+        <div class="flex-col header-title ellipsis">Unicode与UTF8</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -137,11 +139,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">Unicode与UTF8</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-07-21T07:33:59.988Z" itemprop="datePublished" class="page-time">
-  2018年07月21日
+                <time datetime="2018-07-05T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018年07月06日
 </time>
 
 
@@ -160,18 +162,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unicode与UTF8"><span class="post-toc-text">Unicode与UTF8</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-ASCII码"><span class="post-toc-text">1. ASCII码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-GB2312"><span class="post-toc-text">2. GB2312</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Unicode"><span class="post-toc-text">2. Unicode</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-UTF-8"><span class="post-toc-text">3. UTF-8</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实际处理"><span class="post-toc-text">实际处理</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-hello-world"
+<article id="post-Unicode与UTF8"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Hello World</h1>
+        <h1 class="post-card-title">Unicode与UTF8</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018年07月21日 15:33:59" datetime="2018-07-21T07:33:59.988Z"  itemprop="datePublished">2018年07月21日</time>
+            <time class="post-time" title="2018年07月06日 00:00:00" datetime="2018-07-05T16:00:00.000Z"  itemprop="datePublished">2018年07月06日</time>
 
             
 
@@ -184,15 +186,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="Unicode与UTF8"><a href="#Unicode与UTF8" class="headerlink" title="Unicode与UTF8"></a>Unicode与UTF8</h1><h3 id="1-ASCII码"><a href="#1-ASCII码" class="headerlink" title="1. ASCII码"></a>1. ASCII码</h3><p>8bit = 1字节，所以一个字节可以表示2^8=256个数字；<br>所以，一个字节可以表示所有的英文字符。<br>ASCII码（一个字节）成为了美国人的标准编码。</p>
+<h3 id="2-GB2312"><a href="#2-GB2312" class="headerlink" title="2. GB2312"></a>2. GB2312</h3><p>中文不止256个字符，所以中国制定了GB2312编码，用两个字节表示一个汉字。<br>GB2312还把ASCII码包含进去了。</p>
+<h3 id="2-Unicode"><a href="#2-Unicode" class="headerlink" title="2. Unicode"></a>2. Unicode</h3><p>但是，其他国家也同样制定了适合自己国家文字的编码规则，多种语言混合显示机会出现乱码。<br>于是，Unicode出现，将所有语言统一到一套编码中。</p>
+<h3 id="3-UTF-8"><a href="#3-UTF-8" class="headerlink" title="3. UTF-8"></a>3. UTF-8</h3><blockquote>
+<p>问题：</p>
+</blockquote>
+<p>乱码问题虽然解决了，但如果内容全是英文，unicode编码比ASCII码需要多一倍的存储空间，传输过程需要多一倍的传输。</p>
+<blockquote>
+<p>解决：</p>
+</blockquote>
+<p>出现了可编程的编码utf-8，把英文变成1个字节，汉字变成3个字节，特别生僻的变成4-6个字节。<br>如果传输英文，utf-8的作用就非常明显了。</p>
+<h3 id="实际处理"><a href="#实际处理" class="headerlink" title="实际处理"></a>实际处理</h3><p><img src="./dealUTF8.png" width="70%" height="60%"></p>
 
         </div>
 
@@ -201,12 +206,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-07-21T07:33:59.989Z" itemprop="dateUpdated">2018年07月21日 15:33:59</time>
+    最后更新时间：<time datetime="2018-08-23T03:19:13.756Z" itemprop="dateUpdated">2018年08月23日 11:19:13</time>
 </span><br>
 
 
         
-        转载请注明出处：<a href="/2018/07/21/hello-world/" target="_blank" rel="external">http://successli.cn/2018/07/21/hello-world/</a>
+        转载请注明出处：<a href="/2018/07/06/Unicode与UTF8/" target="_blank" rel="external">http://successli.cn/2018/07/06/Unicode与UTF8/</a>
         
     </div>
     
@@ -227,6 +232,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unicode/">unicode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/utf8/">utf8</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -235,7 +242,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/07/21/hello-world/&title=《Hello World》 — successli的个人博客&pic=http://pccmxww5q.bkt.clouddn.com/panda_f.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/07/06/Unicode与UTF8/&title=《Unicode与UTF8》 — successli的个人博客&pic=http://pccmxww5q.bkt.clouddn.com/panda_f.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -245,22 +252,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/07/21/hello-world/&title=《Hello World》 — successli的个人博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/07/06/Unicode与UTF8/&title=《Unicode与UTF8》 — successli的个人博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/07/21/hello-world/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/07/06/Unicode与UTF8/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — successli的个人博客&url=http://successli.cn/2018/07/21/hello-world/&via=http://successli.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Unicode与UTF8》 — successli的个人博客&url=http://successli.cn/2018/07/06/Unicode与UTF8/&via=http://successli.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/07/21/hello-world/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/07/06/Unicode与UTF8/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -280,14 +287,21 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/07/11/剑指offer之二进制1的个数/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">剑指offer之二进制1的个数</h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/04/13/Ethereum私有链的搭建及部分源码编译问题汇总/" id="post-next" class="post-nav-link">
+      <a href="/2018/06/16/bytom离线签名Java实现/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Ethereum私有链的搭建和部分源码编译问题的汇总</h4>
+        <h4 class="title">Bytom离线签名Java实现</h4>
       </a>
     </div>
   
@@ -384,7 +398,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/07/21/hello-world/&title=《Hello World》 — successli的个人博客&pic=http://pccmxww5q.bkt.clouddn.com/panda_f.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://successli.cn/2018/07/06/Unicode与UTF8/&title=《Unicode与UTF8》 — successli的个人博客&pic=http://pccmxww5q.bkt.clouddn.com/panda_f.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -394,22 +408,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/07/21/hello-world/&title=《Hello World》 — successli的个人博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://successli.cn/2018/07/06/Unicode与UTF8/&title=《Unicode与UTF8》 — successli的个人博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/07/21/hello-world/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://successli.cn/2018/07/06/Unicode与UTF8/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hello World》 — successli的个人博客&url=http://successli.cn/2018/07/21/hello-world/&via=http://successli.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Unicode与UTF8》 — successli的个人博客&url=http://successli.cn/2018/07/06/Unicode与UTF8/&via=http://successli.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/07/21/hello-world/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://successli.cn/2018/07/06/Unicode与UTF8/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -420,7 +434,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACO0lEQVR42u3a22rDMBBF0fz/T7vQp5Za6j4zTkDS1lOwG1urgUFzeb3wur7X6Mr1Y/29Mro7esvo7gNLhgwZyzKu6SKbTmG154z2JkOGjHMY8yA7D4XzEJkGYh6aZciQISM9zNWCLAnuMmTIkJEG3PmRjoRmHr5lyJAhI01iSVgkPF5ue0suLkOGjAUZaWPgk5/f2N+QIUPGIowrXKSgXyve8SB7sysZMmRszSCDFDy97Dc+U3AwDyJDhozFGbWDWlp0m4dU/q8JfhMZMmRswUiL+yS9rIVdPsCBOhsyZMjYmsEfx4ctaikub6bKkCFjb0ZarCek/neLibQMGTIOZjx7lwTTYqlOhgwZWzNI+lpLQUlKzHnFGTcZMmQsziBhMW1V8nmtWlv05roMGTK2ZvQbih1Ap+MqQ4aMcxjkuMZfzwtkTzUJgk6sDBkytmCk7cw0TJMyHD9E/roiQ4aMAxjk0bXifjo6VizPyZAh4zBGp/jV6U6kOynOpsmQIWNBRr8032l/pknvP21UGTJkbMogr09Xpz1ZK8DJkCHjBEbagOSHtvQ4SHjDgCtDhoxNGbzU1XlxyuPfkiFDxgmMK1y1MQsSQPmTb+7KkCFja0YtNeUHuM6TeYNBhgwZJzDSZLXWyOyH1GI/VoYMGRsxeCuRJ5xxPt0IzTJkyJBRG60I2pDtYpwMGTJk1LZbS3qLI2gyZMg4gJEORvC/Jxsi7OKwhQwZMrZgpAkk324aXnkb4IH+hgwZMtZgfAE1WxkG1VasxAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQY6EMAwFUe5/aWY70giob4eRcCqrVjcNfiysxPZx4HX+Wfz6399c/Xr//bIlQ4aMzzLO28Wvubrz/YtY9lwZMmRswCBBkNR59ZncuXYHGTJkyOCh39+nlkxlyJAhY1Va5DwSqAwZMmR0DrG1AhxJ3PyaBWdxGTJkfJDBq+7///mV/oYMGTI+xTjDxUv/q467KCoZMmSMZvAExxsAa7eJPB4ZMmTMZqQPIENd6QgFL+E9vCwZMmQMZfAQ05Gv/tBG0JyQIUPGUEZtSKIfYnp8fWhhypAhYxsGeTBPkWkKrh2DZciQsQ8jLfcHxS/8smpgGTJk7MPg41lvBMcLfJevW4YMGRsw+k2CziGWNxsuv5chQ8YGjKDPiQcveOiod3F/ZxkyZIxm1LaA6ZgFp6I2ACm6yZAhYxwDFd9Buky3gCksxsiQIWMEo5NGO6MV/ICK2pkyZMgYzeiMf6XjEfwaHroMGTL2YZCyfjoWlh6J+Xp4cTJkyBjKWJU6SZshHdrgn2XIkLEDgye7WhEtGJ7AQxhHLZfLkCHjswzeRCRB8MNqvzwnQ4aM2YzOATJNxP2GaNDClCFDxiAGX+RhfMPHR75kyJAhg2/XYneYOvv/kiFDxg6M2sG1NpZBCnBptDJkyJDBRy7SzWWt8PfQGJAhQ8b2jE7zkv9KkvjlzIgMGTKGMt4Oi7ysTvlPhgwZsxnp0ZGUw9K2Jd/jtYqAMmTI+B7jBy2R8C73Df9DAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
