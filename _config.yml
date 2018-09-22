@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: successli的个人博客
-subtitle: 记录成长，分享点滴
+title: 周学武的个人博客
+subtitle: 彩虹下的人不会迷失方向！
 description: 
 keywords: 胜。
-author: successli
-email: shengly0619@126.com
+author: 周学武
+email: xuewu982920207@qq.com
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -38,7 +38,7 @@ jsonContent:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://successli.cn
+url: http://sharvy.top
 root: /
 permalink: :year/:month/:day/:title/
 # permalink_defaults:
@@ -105,5 +105,5 @@ theme: indigo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/successli/successli.github.io
+  repo: https://github.com/zxw982920207/zhouxuewu.github.io
   branch: master
